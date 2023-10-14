@@ -92,18 +92,18 @@ def draw():
         canvas.create_rectangle(tile.x, tile.y, tile.x + TILE_SIZE, tile.y + TILE_SIZE, fill="lime green")
     if game_over:
         canvas.create_text(WINDOWS_WIDTH / 2, WINDOWS_HEIGHT / 2, font="Arial 20", text=f"GAME OVER: {score} Scores",
-                            fill="black")
+                            fill="white")
         canvas.create_text(WINDOWS_WIDTH / 2, WINDOWS_HEIGHT / 2 + 40, font="Arial 12", text="Press SPACE to restart",
-                            fill="black")
+                            fill="white")
     else:
-        canvas.create_text(30, 20, font="Arial 10", text=f"score: {score}", fill="white")
+        canvas.create_text(30, 20, font="Arial 10", text=f"score: {score}", fill="black")
     window.after(100, draw)  # 100ms = 1/10 second, 10 frames/second
 
 window = tkinter.Tk()
 window.title("SNAKE GAME BY USING PYTHON PROGRAMMING (press arrow keys to play)")
 window.resizable(False, False)
 
-canvas = tkinter.Canvas(window, bg="white", width=WINDOWS_WIDTH, height=WINDOWS_HEIGHT, borderwidth=0, highlightthickness=0)
+canvas = tkinter.Canvas(window, bg="black", width=WINDOWS_WIDTH, height=WINDOWS_HEIGHT, borderwidth=0, highlightthickness=0)
 canvas.pack()
 window.update()
 # center the window
